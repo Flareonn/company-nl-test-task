@@ -1,0 +1,48 @@
+button {  
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.btn {
+  position: relative;
+
+  padding: 13px 24px 14px 25px;
+  border-radius: 24px;
+
+  background: linear-gradient(270deg, #FFA800 0%, #FF6F00 60%);
+  box-shadow: 0px 6px 14px rgba(255, 168, 0, 60%);
+
+  color: #ffffff;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 21px;
+  letter-spacing: 1.75px;
+
+  text-transform: uppercase;
+}
+
+.btn::after {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: calc(100% - 4px);
+  height: calc(100% - 4px);
+
+  border: none;
+  border-radius: 24px;
+}
+
+.btn:disabled {
+  color: #acacac;
+  background: transparent;
+  box-shadow: none;
+
+  cursor: default;
+  pointer-events: none;
+}
+
+.btn:disabled::after {
+  content: "";
+  border: 2px solid rgba(151, 151, 151, 30%);
+}

@@ -1,0 +1,108 @@
+.v-input-search {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.v-input-search .wrapper {
+  display: flex;
+  align-self: stretch;
+  justify-content: space-between;
+}
+
+.v-input-search .wrapper,
+.v-input-search .v-input-search__autocomplete {
+  border: 1px solid rgba(151, 151, 151, 50%);
+  border-radius: 5px;
+}
+
+.v-input-search .wrapper.open,
+.v-input-search .v-input-search__autocomplete {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #272727;
+}
+
+
+.v-input-search .wrapper.open {
+  border-bottom-color: transparent;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+.v-input-search input {
+  width: 100%;
+  height: 100%;
+  border: none;
+
+  font-size: 18px;
+  line-height: 23px;
+  color: #272727;
+}
+
+.v-input-search input::placeholder,
+.v-input-search .v-input-search__autocomplete {
+  color: #979797;
+}
+
+.v-input-search input:focus {
+  outline: none;
+}
+
+.v-input-search input::-webkit-search-cancel-button {
+  display: none;
+}
+
+.v-input-search input,
+.v-input-search .v-input-search__cancel {
+  border-radius: inherit;
+}
+
+.v-input-search input,
+.v-input-search .v-input-search__cancel {  
+  padding: 11px 0px 13px 16px;
+}
+
+.v-input-search .v-input-search__cancel {
+  padding-right: 20px;
+}
+
+.v-input-search .v-input-search__autocomplete {
+  /* 
+   * Вынужденное позиционирование на 1 пиксель меньше
+   * из-за border-bottom: 0px на блоке wrapper.open
+   */
+  top: calc(100% - 1px);
+  left: 0;
+  background-color: #fff;
+  position: absolute;
+  
+  border-top: 0px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  
+  padding: 5px 0;
+}
+
+.v-input-search .v-input-search__autocomplete li {
+  padding: 7px 12px;
+  font-size: 18px;
+  line-height: 24px;
+  cursor: pointer;
+}
+
+.v-input-search .v-input-search__autocomplete li:hover {
+  color: #272727
+}
+
+.v-input-search .v-input-search__autocomplete::after {
+  position: absolute;
+  top: 0;
+  left: 11px;
+  width: calc(100% - 31px);
+  height: 2px;
+  content: "";
+  background-color: rgba(151, 151, 151, 30%)
+}

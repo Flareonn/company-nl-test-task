@@ -1,0 +1,16 @@
+@import "fonts.css";
+@import "ui";
+@import "pages";
+
+@import "header.css";
+@import "modal.css";
+@import "product.css";
+
+html {
+  font-family: "Futura PT";
+}
+
+.container {
+  max-width: 1224px;
+  margin: 0 auto;
+}

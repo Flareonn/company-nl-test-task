@@ -1,0 +1,61 @@
+.modal {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1050;
+
+  background: #fff;
+
+  min-width: 768px;
+  margin: 0 auto;
+  padding: 18px 18px 32px;
+}
+
+.modal-open {
+  overflow: hidden;
+}
+
+.modal .modal-close {
+  display: flex;
+  margin-left: auto;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  color: #979797;
+}
+
+
+.modal-open::before {
+  content: "";
+  z-index: 1040;
+  background-color: rgba(0, 0, 0, 40%);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.modal-form {
+  display: flex;
+}
+
+.modal-geo .modal-form button[type="submit"] {
+  margin-left: 14px;
+  align-self: flex-end;
+}
+
+.modal-geo .modal-form-item {
+  width: 100%;
+}
+.modal-form-item .modal-form-item__label {
+  display: block;
+
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 24px;
+
+  margin-bottom: 12px;
+}
