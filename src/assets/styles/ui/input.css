@@ -84,6 +84,7 @@
   border-top-right-radius: 0px;
   
   padding: 5px 0;
+  z-index: 1;
 }
 
 .v-input-search .v-input-search__autocomplete li {
