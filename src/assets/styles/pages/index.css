@@ -4,12 +4,6 @@
   margin-top: 35px;
 }
 
-.categories-list {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-}
-
 .categories-list-item {
   position: relative;
   
@@ -36,4 +30,27 @@
 
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 320px) {
+  .categories-list {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
+  }
+}
+@media (min-width: 576px) {
+  .categories-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+@media (min-width: 768px) {
+  .categories-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+@media (min-width: 992px) {
+  .categories-list {
+    grid-template-columns: repeat(4, 1fr);
+  }
 }
