@@ -7,9 +7,10 @@
 
   background: #fff;
 
-  min-width: 768px;
+  max-width: 768px;
+  width: 100%;
+  
   margin: 0 auto;
-  padding: 18px 18px 32px;
 }
 
 .modal-open {
@@ -42,11 +43,7 @@
   display: flex;
 }
 
-.modal-geo .modal-form button[type="submit"] {
-  margin-left: 14px;
-  align-self: flex-end;
-}
-
+/* GEO MODAL */
 .modal-geo .modal-form-item {
   width: 100%;
 }
@@ -58,4 +55,32 @@
   line-height: 24px;
 
   margin-bottom: 12px;
+}
+
+@media (min-width: 320px) {
+  .modal {
+    padding: 20px;
+  }
+  .modal-form {
+    flex-direction: column;
+  }
+  .modal-geo .modal-form button[type="submit"] {
+    margin-top: 10px;
+    margin-left: 0;
+    align-self: flex-start;
+    width: 100%;
+  }
+}
+@media (min-width: 576px) {
+  .modal {
+    padding: 18px 18px 32px;
+  }
+  .modal-form {
+    flex-direction: row;
+  }
+  .modal-geo .modal-form button[type="submit"] {
+    margin-left: 14px;
+    align-self: flex-end;
+    width: auto;
+  }
 }
